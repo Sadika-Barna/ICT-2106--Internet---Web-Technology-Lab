@@ -1,0 +1,35 @@
+body{
+    background-image:url(/Lab\ Class-6/images/flower.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+.heading{
+    margin-top: 300px ;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    
+}
+h2{
+    font-size: 40px;
+}
+p{
+    font-size: 30px;
+    color: brown;
+}
+.btn{
+    display: inline-block;
+    padding: 20px 20px;
+    text-decoration: none;
+    border: 2px solid black;
+    font-size: 25px;
+    background-color: aqua;
+    transition: 0.5s;
+    border-radius: 30px;
+}
+.btn:hover{
+    background-color: brown;
+    transform: scale(1.5) translateY(-10px);
+}
