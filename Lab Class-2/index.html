@@ -1,89 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sadika's Page</title>
 
   <style>
+    /* Body and basic typography */
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #f9f9f9;
       color: #333;
       margin: 20px;
+      line-height: 1.6;
     }
 
-    p {
-      background-color: #c4d7ff;
-      color: brown;
-      text-align: right;
-      padding: 10px;
-      border-radius: 5px;
-    }
-
+    /* Headings styling */
     h1, h2, h3 {
       text-align: center;
-      margin: 20px 0;
+      margin: 25px 0 15px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
     }
 
     h1 {
-      border: 2px solid tomato;
-      padding: 10px;
+      border: 3px solid tomato;
+      padding: 15px 10px;
+      color: tomato;
+      border-radius: 8px;
+      background-color: #ffe6e1;
+      box-shadow: 0 4px 10px rgba(255, 99, 71, 0.2);
     }
 
     h2 {
       border: 2px solid tan;
-      padding: 8px;
+      padding: 12px 8px;
+      border-radius: 6px;
+      background-color: #faf0e6;
+      color: #a0522d;
+      box-shadow: 0 3px 8px rgba(210, 180, 140, 0.3);
     }
 
     h3 {
       border: 2px solid thistle;
-      padding: 6px;
+      padding: 8px 6px;
+      border-radius: 6px;
+      background-color: #f4e1ff;
+      color: #8a2be2;
+      box-shadow: 0 2px 6px rgba(138, 43, 226, 0.3);
     }
 
-    img {
-      display: block;
-      margin: 20px auto;
-      max-width: 100%;
-      height: auto;
-      border-radius: 10px;
+    /* Paragraphs */
+    p {
+      background-color: #c4d7ff;
+      color: brown;
+      text-align: right;
+      padding: 15px 20px;
+      border-radius: 8px;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+      max-width: 800px;
+      margin: 0 auto 30px;
     }
 
-    abbr {
-      text-decoration: underline dotted;
-      cursor: help;
-    }
-
-    address {
-      font-style: italic;
-      color: #666;
-      margin-top: 10px;
-    }
-
+    /* Navigation links container */
     .nav-links {
       text-align: center;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
     }
 
+    /* Navigation links styling */
     .nav-links a {
-      margin: 0 15px;
+      margin: 0 18px;
       color: #007BFF;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 600;
+      font-size: 18px;
+      transition: color 0.3s ease;
     }
 
     .nav-links a:hover {
       text-decoration: underline;
+      color: #004a99;
     }
 
+    /* Image styling */
+    img {
+      display: block;
+      margin: 30px auto;
+      max-width: 100%;
+      height: auto;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s ease;
+    }
+
+    img:hover {
+      transform: scale(1.05);
+      cursor: pointer;
+    }
+
+    /* Abbreviation */
+    abbr {
+      text-decoration: underline dotted;
+      cursor: help;
+      color: teal;
+      font-weight: 600;
+    }
+
+    /* Address styling */
+    address {
+      font-style: italic;
+      color: #666;
+      margin-top: 15px;
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.4;
+    }
+
+    /* BDO for right-to-left */
+    bdo {
+      display: block;
+      margin-top: 15px;
+      font-size: 16px;
+      color: #444;
+      text-align: center;
+    }
+
+    /* Footer */
     footer {
       text-align: center;
       font-size: 14px;
       color: #aaa;
-      margin-top: 40px;
+      margin-top: 50px;
+      border-top: 1px solid #ddd;
+      padding-top: 15px;
     }
   </style>
 </head>
+
 <body>
 
   <!-- Navigation links -->
@@ -119,39 +175,37 @@
     Lorem ipsum dolor sit amet consectetur adipisicing elit.
     <q>Quasi quia voluptates ad esse saepe nobis? Exercitationem, aliquid</q>
     non veritatis expedita modi eaque, accusamus iure alias quos doloribus explicabo! Maiores, accusantium.
-
-    <br><br>
-
-    <abbr title="Institute of Information Technology" style="color: teal;">IIT</abbr>
-
-    <address>
-      Written by John Doe.<br>
-      Visit us at:<br>
-      Example.com<br>
-      Box 564, Disneyland<br>
-      USA
-    </address>
-
-    <bdo dir="rtl">This line will be written from right to left</bdo>
   </p>
+
+  <abbr title="Institute of Information Technology">IIT</abbr>
+
+  <address>
+    Written by John Doe.<br />
+    Visit us at:<br />
+    Example.com<br />
+    Box 564, Disneyland<br />
+    USA
+  </address>
+
+  <bdo dir="rtl">This line will be written from right to left</bdo>
 
   <h1>Hello World</h1>
   <h2>Sadika Islam Barna</h2>
   <h3>Tinni is a good friend</h3>
 
   <!-- Image -->
-  <img src="/Lab Class-6/images/flower.jpg" alt="Flower" width="500" height="500">
+  <img src="/Lab Class-6/images/flower.jpg" alt="Flower" width="500" height="500" />
 
   <!-- External Links -->
   <p class="nav-links">
-    <a href="https://schools.com" target="_blank">Visit Schools.com</a><br>
+    <a href="https://schools.com" target="_blank" rel="noopener noreferrer">Visit Schools.com</a><br />
     <a href="mailto:someone@example.com">Send email</a>
   </p>
 
   <!-- Image with clickable area -->
-  <img src="/Lab Class-2/images/Sadika.jpg" alt="Scenery" usemap="#scene" width="500">
+  <img src="/Lab Class-2/images/Sadika.jpg" alt="Scenery" usemap="#scene" width="500" />
   <map name="scene">
-    <area shape="rect" coords="0,0,30,30" href="/Lab Class-2/images/WhatsApp Image 2025-02-24 at 00.24.24_6242f896.jpg" alt="Clickable Area">
+    <area shape="rect" coords="0,0,30,30" href="/Lab Class-2/images/WhatsApp Image 2025-02-24 at 00.24.24_6242f896.jpg" alt="Clickable Area" />
   </map>
 
   <footer>
@@ -159,4 +213,5 @@
   </footer>
 
 </body>
+
 </html>
