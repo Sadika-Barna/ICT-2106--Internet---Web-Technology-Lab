@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Beautiful Colorful Card</title>
+  <style>
+    /* Body with vertical gradient background */
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      color: white;
+    }
+
+    /* Card container */
+    .card {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(15px);
+      border-radius: 20px;
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      max-width: 450px;
+      padding: 30px 40px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 40px rgba(37, 117, 252, 0.6);
+    }
+
+    h1 {
+      margin-bottom: 15px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.5;
+      margin-bottom: 25px;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    }
+
+    /* Stylish button */
+    button {
+      background: #2575fc;
+      border: none;
+      padding: 12px 28px;
+      font-size: 16px;
+      font-weight: 600;
+      border-radius: 50px;
+      cursor: pointer;
+      color: white;
+      box-shadow: 0 6px 15px rgba(37, 117, 252, 0.6);
+      transition: background 0.3s ease, box-shadow 0.3s ease;
+      user-select: none;
+    }
+
+    button:hover {
+      background: #6a11cb;
+      box-shadow: 0 8px 25px rgba(106, 17, 203, 0.7);
+    }
+
+    button:active {
+      transform: scale(0.95);
+      box-shadow: 0 4px 12px rgba(106, 17, 203, 0.5);
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Welcome to Beautiful Web!</h1>
+    <p>
+      This is a simple yet elegant card with smooth gradient background and beautiful shadows.  
+      Hover over to see the magic!
+    </p>
+    <button onclick="alert('Thanks for clicking!')">Click Me</button>
+  </div>
+</body>
+</html>
