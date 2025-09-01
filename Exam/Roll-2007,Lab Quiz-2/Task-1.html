@@ -1,220 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Beautiful Colorful Card with Themes</title>
-  <style>
-    /* Base styles */
-    body {
-      margin: 0;
-      min-height: 100vh;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 20px;
-      color: white;
-      transition: background 0.5s ease, color 0.5s ease;
-      user-select: none;
-      flex-direction: column;
-      gap: 20px;
-    }
+function countVowels(sentence) {
+  // Define vowels (both lowercase and uppercase)
+  const vowels = ['a', 'e', 'i', 'o', 'u'];
+  let count = 0;
 
-    /* Container for card and theme switcher */
-    .wrapper {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 20px;
-      width: 100%;
-      max-width: 500px;
-    }
+  // Convert sentence to lowercase to count vowels case-insensitively
+  const lowerSentence = sentence.toLowerCase();
 
-    /* Card styles */
-    .card {
-      border-radius: 20px;
-      padding: 30px 40px;
-      text-align: center;
-      max-width: 100%;
-      transition: all 0.3s ease;
-      user-select: text;
-      box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
-      cursor: default;
+  // Loop through each character in the sentence
+  for (let char of lowerSentence) {
+    if (vowels.includes(char)) {
+      count++;
     }
-    .card:hover,
-    .card:focus-within {
-      transform: scale(1.05);
-      box-shadow: 0 12px 40px rgba(37, 117, 252, 0.6);
-      outline: none;
-    }
+  }
+  
+  return count;
+}
 
-    h1 {
-      margin-bottom: 15px;
-      font-weight: 700;
-      letter-spacing: 1.2px;
-      font-size: 2.4rem;
-      line-height: 1.2;
-    }
+// Example usage:
+const input = "Hello! How are you?";
+const vowelCount = countVowels(input);
 
-    p {
-      font-size: 1.15rem;
-      line-height: 1.6;
-      margin-bottom: 30px;
-      font-weight: 500;
-    }
-
-    /* Stylish button */
-    button {
-      border: none;
-      padding: 14px 32px;
-      font-size: 1rem;
-      font-weight: 600;
-      border-radius: 50px;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      transition: all 0.3s ease;
-      outline-offset: 3px;
-      user-select: none;
-      box-shadow: 0 6px 15px rgba(37, 117, 252, 0.6);
-    }
-
-    button:active {
-      transform: scale(0.95);
-      box-shadow: 0 4px 12px rgba(106, 17, 203, 0.5);
-    }
-
-    /* Icon inside button */
-    .btn-icon {
-      width: 20px;
-      height: 20px;
-      flex-shrink: 0;
-      transition: transform 0.3s ease;
-      fill: currentColor;
-    }
-    button:hover .btn-icon {
-      transform: translateX(4px);
-    }
-
-    /* THEME 1: Colorful Gradient (Default) */
-    body.theme-colorful {
-      background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
-      color: white;
-    }
-    body.theme-colorful .card {
-      background: rgba(255, 255, 255, 0.15);
-      backdrop-filter: blur(15px);
-      box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
-      color: white;
-    }
-    body.theme-colorful button {
-      background: #2575fc;
-      color: white;
-      box-shadow: 0 6px 15px rgba(37, 117, 252, 0.6);
-    }
-    body.theme-colorful button:hover,
-    body.theme-colorful button:focus {
-      background: #6a11cb;
-      box-shadow: 0 8px 25px rgba(106, 17, 203, 0.7);
-      outline: none;
-    }
-
-    /* THEME 2: Light Theme */
-    body.theme-light {
-      background: #f0f4f8;
-      color: #1a1a1a;
-    }
-    body.theme-light .card {
-      background: #fff;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-      color: #1a1a1a;
-    }
-    body.theme-light button {
-      background: #4a90e2;
-      color: white;
-      box-shadow: 0 4px 15px rgba(74, 144, 226, 0.6);
-    }
-    body.theme-light button:hover,
-    body.theme-light button:focus {
-      background: #357ABD;
-      box-shadow: 0 6px 20px rgba(53, 122, 189, 0.7);
-      outline: none;
-    }
-
-    /* THEME 3: Dark Theme */
-    body.theme-dark {
-      background: #121212;
-      color: #e0e0e0;
-    }
-    body.theme-dark .card {
-      background: rgba(30, 30, 30, 0.85);
-      box-shadow: 0 8px 40px rgba(255, 255, 255, 0.1);
-      color: #e0e0e0;
-    }
-    body.theme-dark button {
-      background: #bb86fc;
-      color: #121212;
-      box-shadow: 0 6px 15px rgba(187, 134, 252, 0.7);
-    }
-    body.theme-dark button:hover,
-    body.theme-dark button:focus {
-      background: #985EFF;
-      box-shadow: 0 8px 25px rgba(152, 94, 255, 0.9);
-      outline: none;
-    }
-
-    /* Responsive */
-    @media (max-width: 480px) {
-      .card {
-        padding: 25px 30px;
-      }
-
-      h1 {
-        font-size: 2rem;
-      }
-
-      p {
-        font-size: 1rem;
-        margin-bottom: 25px;
-      }
-
-      button {
-        padding: 12px 24px;
-        font-size: 0.95rem;
-      }
-    }
-  </style>
-</head>
-<body class="theme-colorful">
-  <div class="wrapper">
-    <div class="card" tabindex="0" aria-label="Welcome card">
-      <h1>Welcome to Beautiful Web!</h1>
-      <p>
-        This is a simple yet elegant card with smooth gradient background and beautiful shadows.
-        Hover over to see the magic!
-      </p>
-      <button type="button" aria-pressed="false" onclick="alert('Thanks for clicking!')">
-        Click Me
-        <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-          <path d="M13 5l7 7-7 7M5 12h14" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </button>
-    </div>
-
-    <select aria-label="Select Theme" id="themeSwitcher" title="Select Theme" style="padding:8px 12px; border-radius: 8px; border: none; font-size: 1rem; cursor: pointer;">
-      <option value="theme-colorful">Colorful Gradient</option>
-      <option value="theme-light">Light Theme</option>
-      <option value="theme-dark">Dark Theme</option>
-    </select>
-  </div>
-
-  <script>
-    const themeSwitcher = document.getElementById('themeSwitcher');
-    themeSwitcher.addEventListener('change', (e) => {
-      document.body.className = e.target.value;
-    });
-  </script>
-</body>
-</html>
+console.log(`There are ${vowelCount} vowels in the sentence.`);
