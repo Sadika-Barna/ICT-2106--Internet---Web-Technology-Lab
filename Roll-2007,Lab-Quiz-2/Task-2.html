@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Toggle Example</title>
+    <style>
+        img {
+            width: 700px;
+            height: auto;
+            cursor: pointer;
+            display: block;
+            margin: 70px auto;
+        }
+    </style>
+</head>
+<body>
+
+    <h2 style="text-align: center;">Click the Image to Toggle</h2>
+
+    <div id="image-container">
+        
+    </div>
+
+     <script type="text/javascript" src="Task-2.js"></script>
+<script>const images = [
+            "image/picture/image2.jpg",
+            "image/picture/image3.jpg",
+            "image/picture/image4.jpg",
+            "image/picture/katgolap.jpeg",
+            "image/picture/Sadika.jpg"
+        ];
+
+        let currentImageIndex = 0;
+
+        
+        const newImage = document.createElement("img");
+        newImage.src = images[currentImageIndex];
+
+        
+        newImage.addEventListener("click", () => {
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            newImage.src = images[currentImageIndex];
+        });
+
+        
+        const container = document.getElementById("image-container");
+        container.innerHTML = "";  
+        container.appendChild(newImage);  </script>
+</body>
+</html>

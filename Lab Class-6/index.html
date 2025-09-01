@@ -1,79 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
 
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
-    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"></link> -->
-  </head>
-  <body>
-    <div class="container bg-danger">
-        <h1 class="display-1 text-center">
-            LAB CLASS - 5
-        </h1>
-        <h1 class="container bg-secondary">
-            Sadika Islam Barna
-        </h1>
-      <div class="m-5 mt-xl-5">
-        <button type=" button" class="btn btn-success">IIT-14 Batch</button>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Colorful LAB CLASS 5</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+
+  <style>
+    body {
+      background-color: #d0e7ff; /* Light Blue background */
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      min-height: 100vh;
+      color: #222;
+      padding: 30px 15px;
+    }
+
+    .header-danger {
+      background: linear-gradient(90deg, #ff416c, #ff4b2b);
+      color: white;
+      padding: 3rem 1rem;
+      border-radius: 15px;
+      box-shadow: 0 8px 15px rgba(255, 75, 43, 0.4);
+      margin-bottom: 1.5rem;
+      font-weight: 900;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    }
+
+    .header-secondary {
+      background: linear-gradient(90deg, #667eea, #764ba2);
+      color: white;
+      padding: 1.5rem 1rem;
+      border-radius: 15px;
+      margin-bottom: 2.5rem;
+      font-weight: 700;
+      text-align: center;
+      box-shadow: 0 5px 12px rgba(118, 75, 162, 0.5);
+    }
+
+    .btn-success {
+      background: linear-gradient(45deg, #11998e, #38ef7d);
+      border: none;
+      font-weight: 700;
+      padding: 0.75rem 2rem;
+      font-size: 1.3rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 10px rgba(56, 239, 125, 0.5);
+    }
+
+    .btn-success:hover {
+      background: linear-gradient(45deg, #38ef7d, #11998e);
+      box-shadow: 0 8px 15px rgba(17, 153, 142, 0.7);
+      transform: scale(1.05);
+    }
+
+    .custom-col > .row > .col {
+      color: white;
+      font-weight: 600;
+      padding: 1rem 0;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .bg-success-green {
+      background: linear-gradient(90deg, #11998e, #38ef7d);
+      color: white;
+      padding: 1.5rem;
+      border-radius: 15px;
+      box-shadow: 0 6px 20px rgba(17, 153, 142, 0.4);
+      font-weight: 500;
+      line-height: 1.5;
+    }
+
+    blockquote.blockquote {
+      border-left: 6px solid #ff4b2b;
+      background: #fff4f2;
+      color: #cc2b0f;
+      padding: 1.5rem 2rem;
+      font-size: 1.3rem;
+      border-radius: 12px;
+      font-style: italic;
+      box-shadow: 0 5px 15px rgba(255, 75, 43, 0.3);
+      max-width: 600px;
+      margin: 3rem auto 2rem auto;
+    }
+
+    .blockquote-footer {
+      color: #ff4b2b;
+      font-weight: 600;
+      font-size: 1rem;
+      text-align: right;
+      margin-right: 5%;
+    }
+
+    img.rounded {
+      max-width: 320px;
+      height: auto;
+      margin: 2rem auto;
+      display: block;
+      border-radius: 25px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+      border: 5px solid white;
+    }
+
+    .names-row .col {
+      background: linear-gradient(90deg, #ff9966, #ff5e62);
+      color: white;
+      font-weight: 700;
+      padding: 1rem 0;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(255, 94, 98, 0.5);
+      transition: transform 0.3s ease;
+      cursor: default;
+    }
+
+    .names-row .col:hover {
+      transform: scale(1.1);
+      box-shadow: 0 8px 20px rgba(255, 94, 98, 0.8);
+    }
+
+    .batch-row .col {
+      background: linear-gradient(90deg, #36d1dc, #5b86e5);
+      color: white;
+      font-weight: 700;
+      padding: 1rem 0;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(91, 134, 229, 0.5);
+      transition: transform 0.3s ease;
+      cursor: default;
+    }
+
+    .batch-row .col:hover {
+      transform: scale(1.1);
+      box-shadow: 0 8px 20px rgba(91, 134, 229, 0.8);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <!-- Header Section -->
+    <div class="header-danger text-center">
+      <h1 class="display-2">LAB CLASS - 5</h1>
+    </div>
+
+    <div class="header-secondary">
+      <h2>Sadika Islam Barna</h2>
+    </div>
+
+    <!-- Button Section -->
+    <div class="text-center mb-5">
+      <button type="button" class="btn btn-success btn-lg">IIT-14 Batch</button>
+    </div>
+
+    <!-- Content Row -->
+    <div class="row g-4 mb-5">
+      <!-- Left two small columns -->
+      <div class="col-12 col-md-2 custom-col">
+        <div class="row g-3">
+          <div class="col" style="background: linear-gradient(90deg, #ff5858, #f09819);">Lorem</div>
+          <div class="col" style="background: linear-gradient(90deg, #56ab2f, #a8e063);">lorem</div>
+        </div>
       </div>
-      <div class="row">
-        <div class="col-2 align-self-start p-5 gx-4">
-        
-            <div class="row">
-                <div class="col bg-success">Lorem</div>
-                <div class="col bg-success">lorem</div>
-            </div>
-        </div>
 
-        <div class="col-4 align-self-middle  p-5 gx-4">
-          <p class="bg-success">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt
-            corporis fuga praesentium. Neque, mollitia velit accusamus
-            distinctio odit totam sint recusandae, ratione debitis dicta harum
-            necessitatibus suscipit accusantium, porro nostrum?
-          </p>
-        </div>
-        <div class="col-6 align-self-end p-5 gx-4">
-          <p class="bg-success">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt
-            corporis fuga praesentium. Neque, mollitia velit accusamus
-            distinctio odit totam sint recusandae, ratione debitis dicta harum
-            necessitatibus suscipit accusantium, porro nostrum?
-          </p>
-        </div>
+      <!-- Middle paragraph -->
+      <div class="col-12 col-md-4 bg-success-green">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt corporis fuga praesentium. Neque,
+          mollitia velit accusamus distinctio odit totam sint recusandae, ratione debitis dicta harum necessitatibus
+          suscipit accusantium, porro nostrum?
+        </p>
+      </div>
+
+      <!-- Right paragraph -->
+      <div class="col-12 col-md-6 bg-success-green">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt corporis fuga praesentium. Neque,
+          mollitia velit accusamus distinctio odit totam sint recusandae, ratione debitis dicta harum necessitatibus
+          suscipit accusantium, porro nostrum?
+        </p>
       </div>
     </div>
-    <figure>
-        <blockquote class="blockquote">
-          <p>A well-known quote, contained in a blockquote element.</p>
-        </blockquote>
-        <figcaption class="blockquote-footer">
-          Someone famous in <cite title="Source Title">Source Title</cite>
-        </figcaption>
-      </figure>
-      <img src="picture.jpg" class="rounded mx-auto d-block" >
-      
+
+    <!-- Quote Section -->
+    <figure class="blockquote">
+      <blockquote class="blockquote">
+        <p>A well-known quote, contained in a blockquote element.</p>
+      </blockquote>
+      <figcaption class="blockquote-footer">
+        Someone famous in <cite title="Source Title">Source Title</cite>
+      </figcaption>
+    </figure>
+
+    <!-- Image Section -->
+    <div class="text-center">
+      <img src="/Lab Class-6/images/picture.jpg" alt="Sadika Islam Barna" class="rounded" />
+    </div>
+
+    <!-- Names Row -->
+    <div class="row names-row text-center mt-4 gx-3 gy-3">
       <div class="col">Sadika</div>
       <div class="col">Meghla</div>
       <div class="col">Prity</div>
-      <div>
-<div class="col">CSE-32</div>
-<div class="col">IIT-14</div>
-<div class="col">IIT-14</div>
-</div>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
-    <!-- <script src="js/bootstrap.bundle.min.js"></script> -->
-  </body>
+    </div>
+
+    <!-- Batch Row -->
+    <div class="row batch-row text-center mt-3 gx-3 gy-3">
+      <div class="col">CSE-32</div>
+      <div class="col">IIT-14</div>
+      <div class="col">IIT-14</div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+
 </html>
