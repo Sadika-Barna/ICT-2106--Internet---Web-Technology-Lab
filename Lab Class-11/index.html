@@ -2,25 +2,49 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>JavaScript DOM Loop Example</title>
+    <title>Colorful Fruit List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            padding: 30px;
+        }
+
+        h2 {
+            color: #2c3e50;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            font-size: 18px;
+            margin: 8px 0;
+            padding: 10px;
+            border-radius: 8px;
+            color: white;
+            width: fit-content;
+        }
+    </style>
 </head>
 <body>
 
-    <h2>My Favorite Fruits</h2>
+    <h2>🍎 My Favorite Fruits</h2>
     <ul id="fruitList"></ul>
 
     <script>
-        // JavaScript array
         const fruits = ["Apple", "Banana", "Mango", "Orange", "Pineapple"];
+        const colors = ["#e74c3c", "#f1c40f", "#2ecc71", "#e67e22", "#9b59b6"]; // Matching colors
 
-        // Get the ul element by ID
         const list = document.getElementById("fruitList");
 
-        // Loop through the array and create li elements
         for (let i = 0; i < fruits.length; i++) {
-            const li = document.createElement("li");  // Create <li> element
-            li.textContent = fruits[i];               // Set the text
-            list.appendChild(li);                     // Add it to the list
+            const li = document.createElement("li");
+            li.textContent = fruits[i];
+            li.style.backgroundColor = colors[i]; // Set background color
+            list.appendChild(li);
         }
     </script>
 
