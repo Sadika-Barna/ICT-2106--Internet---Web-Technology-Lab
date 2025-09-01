@@ -2,92 +2,191 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Colorful Image Toggle Example</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kidz School</title>
   <style>
     body {
+      font-family: Arial, sans-serif;
       margin: 0;
-      background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      color: #333;
-      min-height: 100vh;
+      background: #fff;
+      color: #555;
+    }
+    .top-bar {
+      background: #666;
+      color: white;
       display: flex;
-      flex-direction: column;
-      justify-content: center;
+      justify-content: space-between;
+      padding: 6px 20px;
+      font-size: 14px;
       align-items: center;
-      padding: 40px 20px;
-      text-align: center;
-      user-select: none;
     }
-    h2 {
-      font-size: 2.4rem;
-      font-weight: 700;
-      color: #4a148c;
-      margin-bottom: 25px;
-      text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    .top-bar .left, .top-bar .right {
+      display: flex;
+      gap: 15px;
+      align-items: center;
     }
-    #image-container img {
-      width: 700px;
-      max-width: 90vw;
-      height: auto;
+    .top-bar a {
+      color: white;
+      text-decoration: none;
       cursor: pointer;
-      border-radius: 20px;
-      box-shadow: 0 12px 30px rgba(74, 20, 140, 0.5);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-    #image-container img:hover {
-      transform: scale(1.05);
-      box-shadow: 0 18px 45px rgba(74, 20, 140, 0.7);
+    header {
+      display: flex;
+      justify-content: space-between;
+      padding: 15px 20px;
+      background: #f7f7f7;
+      align-items: center;
+      border-bottom: 1px solid #ddd;
     }
-    #caption {
-      margin-top: 15px;
-      font-size: 1.1rem;
+    .logo {
+      font-weight: bold;
+      font-size: 22px;
+      color: #444;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .logo img {
+      height: 40px;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      padding: 0;
+      margin: 0;
+    }
+    nav ul li {
+      cursor: pointer;
       font-weight: 600;
-      color: #6a1b9a;
-      text-shadow: 0 1px 2px rgba(255, 255, 255, 0.6);
+      color: #555;
     }
-    @media (max-width: 720px) {
-      #image-container img {
-        width: 100%;
-      }
+    nav ul li:hover {
+      color: #0099ff;
+    }
+    .hero {
+      position: relative;
+      color: white;
+      text-align: left;
+      max-width: 1200px;
+      margin: 20px auto;
+    }
+    .hero img {
+      width: 100%;
+      border-radius: 10px;
+      filter: brightness(0.7);
+    }
+    .hero-text {
+      position: absolute;
+      top: 50px;
+      left: 50px;
+      max-width: 600px;
+    }
+    .hero-text h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+      color: white;
+    }
+    .hero-text p {
+      font-size: 18px;
+      color: white;
+      line-height: 1.4;
+    }
+    .services {
+      max-width: 1200px;
+      margin: 30px auto;
+      display: flex;
+      justify-content: space-around;
+      gap: 15px;
+    }
+    .service-box {
+      background: #f7f7f7;
+      border-radius: 8px;
+      width: 22%;
+      text-align: center;
+      padding: 20px 10px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      box-shadow: 0 0 8px #ddd;
+    }
+    .service-box:hover {
+      background: #0099ff;
+      color: white;
+    }
+    .service-box img {
+      width: 50px;
+      margin-bottom: 12px;
+      filter: grayscale(100%);
+      transition: filter 0.3s ease;
+    }
+    .service-box:hover img {
+      filter: none;
+    }
+    .service-box p {
+      font-weight: 600;
+      font-size: 18px;
+      margin: 0;
     }
   </style>
 </head>
 <body>
 
-  <h2>Click the Image to Toggle</h2>
-
-  <div id="image-container">
-    <!-- Image will be injected here -->
+  <div class="top-bar">
+    <div class="left">
+      <span>info@yourdomain.com</span>
+      <span>+123 567 890</span>
+      <span>Open Sat-Sun 9-5pm</span>
+    </div>
+    <div class="right">
+      <span>Language ▼</span>
+      <a href="#">Login</a>
+      <a href="#">Create an account</a>
+    </div>
   </div>
-  <div id="caption"></div>
 
-  <script>
-    const images = [
-      { src: "image/picture/image2.jpg", caption: "Beautiful Landscape 1" },
-      { src: "image/picture/image3.jpg", caption: "Serene Nature View" },
-      { src: "image/picture/image4.jpg", caption: "Sunset Glow" },
-      { src: "image/picture/katgolap.jpeg", caption: "Katgolap Flower" },
-      { src: "image/picture/Sadika.jpg", caption: "Portrait: Sadika" }
-    ];
+  <header>
+    <div class="logo">
+      <img src="https://cdn-icons-png.flaticon.com/512/197/197581.png" alt="Logo" />
+      KIDZ SCHOOL
+    </div>
+    <nav>
+      <ul>
+        <li>Home</li>
+        <li>Courses</li>
+        <li>Pages</li>
+        <li>Blog</li>
+        <li>Events</li>
+        <li>Components</li>
+      </ul>
+    </nav>
+  </header>
 
-    let currentImageIndex = 0;
+  <section class="hero">
+    <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=1350&q=80" alt="Kids smiling" />
+    <div class="hero-text">
+      <h1>Kindergarten Education</h1>
+      <p>Kidz is a perfect theme for kindergarten school. Very simple and easy to use.</p>
+    </div>
+  </section>
 
-    const container = document.getElementById("image-container");
-    const captionDiv = document.getElementById("caption");
-
-    const newImage = document.createElement("img");
-    newImage.src = images[currentImageIndex].src;
-    captionDiv.textContent = images[currentImageIndex].caption;
-
-    newImage.addEventListener("click", () => {
-      currentImageIndex = (currentImageIndex + 1) % images.length;
-      newImage.src = images[currentImageIndex].src;
-      captionDiv.textContent = images[currentImageIndex].caption;
-    });
-
-    container.appendChild(newImage);
-  </script>
+  <section class="services">
+    <div class="service-box">
+      <img src="https://img.icons8.com/ios/50/000000/open-book--v1.png" alt="Courses" />
+      <p>Courses</p>
+    </div>
+    <div class="service-box">
+      <img src="https://img.icons8.com/ios/50/000000/calendar--v1.png" alt="Events" />
+      <p>Events</p>
+    </div>
+    <div class="service-box">
+      <img src="https://img.icons8.com/ios/50/000000/picture.png" alt="Gallery" />
+      <p>Gallery</p>
+    </div>
+    <div class="service-box">
+      <img src="https://img.icons8.com/ios/50/000000/news.png" alt="News" />
+      <p>News</p>
+    </div>
+  </section>
 
 </body>
 </html>
