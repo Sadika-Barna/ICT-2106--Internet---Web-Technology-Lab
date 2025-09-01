@@ -1,145 +1,241 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Sadika's Page</title>
 
   <style>
     /* Global Styles */
     html {
       scroll-behavior: smooth;
+      background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
+      min-height: 100%;
     }
 
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f1f7ff;
-      color: #333;
       margin: 0;
       padding: 0;
+      color: #222;
       line-height: 1.6;
+      background: transparent;
     }
 
     .container {
       max-width: 900px;
-      margin: auto;
-      padding: 20px;
+      margin: 30px auto 60px auto;
+      background: #fff;
+      padding: 30px 40px;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+      transition: box-shadow 0.3s ease;
     }
 
+    .container:hover {
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.18);
+    }
+
+    /* Headings */
     h1, h2, h3 {
       text-align: center;
       margin: 20px 0;
+      font-weight: 700;
     }
 
     h1 {
-      border: 2px solid tomato;
-      padding: 10px;
-      background-color: #fff4f2;
+      border: 3px solid #ff6347; /* tomato */
+      padding: 12px;
+      background: #fff0f0;
+      color: #b22222;
+      border-radius: 12px;
+      text-shadow: 1px 1px 2px #ff8c69;
     }
 
     h2 {
-      border: 2px solid tan;
-      padding: 8px;
-      background-color: #fff8f0;
+      border: 3px solid #d2b48c; /* tan */
+      padding: 10px;
+      background: #fff8f2;
+      color: #a0522d;
+      border-radius: 12px;
+      box-shadow: inset 0 0 6px #ffe5b4;
     }
 
     h3 {
-      border: 2px solid thistle;
-      padding: 6px;
-      background-color: #f9f0ff;
+      border: 3px solid #d8bfd8; /* thistle */
+      padding: 8px;
+      background: #faf0ff;
+      color: #9932cc;
+      border-radius: 12px;
+      font-style: italic;
+      box-shadow: inset 0 0 6px #dabfff;
     }
 
     p {
-      background-color: #e4edff;
-      color: brown;
+      background-color: #e6f0ff;
+      color: #6b3e26;
       text-align: right;
-      padding: 10px;
-      border-radius: 6px;
-      margin: 10px 0;
+      padding: 14px 20px;
+      border-radius: 12px;
+      margin: 15px 0;
+      box-shadow: 0 2px 6px rgba(107, 62, 38, 0.15);
+      font-size: 1.1rem;
+      line-height: 1.5;
+      transition: background-color 0.3s ease;
     }
 
+    p:hover {
+      background-color: #d0e2ff;
+    }
+
+    /* Navigation Links */
     .nav-links {
       text-align: center;
-      padding: 15px;
-      background-color: #007BFF;
+      padding: 18px 0;
+      background: linear-gradient(90deg, #007BFF, #00d4ff);
+      border-radius: 0 0 20px 20px;
+      box-shadow: 0 6px 15px rgba(0, 123, 255, 0.4);
+      position: sticky;
+      top: 0;
+      z-index: 10;
     }
 
     .nav-links a {
-      margin: 0 15px;
-      color: white;
+      margin: 0 20px;
+      color: #fff;
+      font-weight: 700;
       text-decoration: none;
-      font-weight: bold;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
+      padding: 5px 12px;
+      border-radius: 8px;
     }
 
     .nav-links a:hover {
+      background-color: #0056b3;
+      color: #e0e0e0;
       text-decoration: underline;
+      box-shadow: 0 0 10px #0056b3;
     }
 
+    /* Image Styling */
     img {
       display: block;
-      margin: 20px auto;
+      margin: 25px auto;
       max-width: 100%;
       height: auto;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 20px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
     }
 
+    img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+    }
+
+    /* Abbreviation */
     abbr {
       text-decoration: underline dotted;
       cursor: help;
       color: teal;
+      font-weight: 600;
     }
 
+    /* Address */
     address {
       font-style: italic;
       color: #555;
-      margin-top: 10px;
+      margin-top: 15px;
+      font-size: 1rem;
+      line-height: 1.4;
+      max-width: 300px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
+    /* BDO Styling */
     bdo {
       display: block;
-      margin-top: 10px;
-      background-color: #f0f0f0;
-      padding: 8px;
-      border-left: 4px solid #999;
+      margin-top: 20px;
+      background-color: #f4f4f4;
+      padding: 12px 20px;
+      border-left: 5px solid #999;
+      border-radius: 0 10px 10px 0;
+      font-weight: 600;
+      font-size: 1rem;
     }
 
-    footer {
-      text-align: center;
-      font-size: 14px;
-      color: #aaa;
-      margin-top: 50px;
-      padding: 20px;
-      background-color: #f5f5f5;
-    }
-
-    /* External link section */
+    /* External links */
     .external-links {
       text-align: center;
-      margin: 30px 0;
+      margin: 40px 0 10px 0;
     }
 
     .external-links a {
       display: inline-block;
-      margin: 10px;
+      margin: 0 15px;
+      padding: 10px 20px;
       color: #007BFF;
       text-decoration: none;
+      font-weight: 600;
+      border: 2px solid #007BFF;
+      border-radius: 15px;
+      transition: background-color 0.3s ease, color 0.3s ease;
     }
 
     .external-links a:hover {
-      text-decoration: underline;
+      background-color: #007BFF;
+      color: white;
+      box-shadow: 0 4px 15px rgba(0, 123, 255, 0.5);
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      font-size: 14px;
+      color: #777;
+      margin: 50px 0 20px 0;
+      padding: 20px 10px;
+      border-top: 1px solid #ddd;
+      user-select: none;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .container {
+        padding: 20px;
+        margin: 20px auto 40px auto;
+      }
+
+      .nav-links a {
+        margin: 0 10px;
+        padding: 8px 15px;
+        font-size: 1rem;
+      }
+
+      h1, h2, h3 {
+        font-size: 1.5rem;
+      }
+
+      p {
+        font-size: 1rem;
+        padding: 12px 15px;
+      }
     }
   </style>
 </head>
-<body>
 
+<body>
   <div class="nav-links">
     <a href="#C4">Jump to Chapter 4</a>
     <a href="#C10">Jump to Chapter 10</a>
   </div>
 
   <div class="container">
-    <!-- Chapter Sections -->
+    <!-- Chapters -->
     <section>
       <h2>Chapter 1</h2>
       <p>This chapter explains bla bla bla</p>
@@ -174,10 +270,10 @@
         <abbr title="Institute of Information Technology">IIT</abbr>
 
         <address>
-          Written by John Doe.<br>
-          Visit us at:<br>
-          Example.com<br>
-          Box 564, Disneyland<br>
+          Written by John Doe.<br />
+          Visit us at:<br />
+          Example.com<br />
+          Box 564, Disneyland<br />
           USA
         </address>
 
@@ -194,22 +290,20 @@
 
     <!-- Image -->
     <section>
-      <img src="/Lab Class-6/images/flower.jpg" alt="Flower Image" width="500" height="500">
+      <img src="/Lab Class-6/images/flower.jpg" alt="Flower Image" width="500" height="500" />
     </section>
 
     <!-- External Links -->
     <section class="external-links">
-      <a href="https://schools.com" target="_blank">Visit Schools.com</a><br>
+      <a href="https://schools.com" target="_blank" rel="noopener noreferrer">Visit Schools.com</a><br />
       <a href="mailto:someone@example.com">Send Email</a>
     </section>
 
     <!-- Image with clickable map -->
     <section>
-      <img src="/Lab Class-2/images/Sadika.jpg" alt="Scenery" usemap="#scene" width="500">
+      <img src="/Lab Class-2/images/Sadika.jpg" alt="Scenery" usemap="#scene" width="500" />
       <map name="scene">
-        <area shape="rect" coords="0,0,30,30"
-              href="/Lab Class-2/images/WhatsApp Image 2025-02-24 at 00.24.24_6242f896.jpg"
-              alt="Clickable Area">
+        <area shape="rect" coords="0,0,30,30" href="/Lab Class-2/images/WhatsApp Image 2025-02-24 at 00.24.24_6242f896.jpg" alt="Clickable Area" />
       </map>
     </section>
   </div>
@@ -217,6 +311,6 @@
   <footer>
     &copy; 2025 | Designed by Sadika Islam Barna
   </footer>
-
 </body>
+
 </html>
