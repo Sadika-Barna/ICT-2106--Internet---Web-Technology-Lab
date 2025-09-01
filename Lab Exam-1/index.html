@@ -16,26 +16,64 @@
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: cover;
-        color: aliceblue;
+        color: #cce4ff; /* Soft light blue text */
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       }
 
-      .cont {
-        position: relative;
-        width: 100%;
-        height: 100vh;
+      nav.navbar {
+        background-color: #003366 !important; /* Dark blue navbar */
       }
 
-      .hro-img {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+      nav.navbar a.navbar-brand,
+      nav.navbar a.nav-link {
+        color: #99ccff !important; /* Light blue links */
+        font-weight: 600;
+        transition: color 0.3s ease;
+      }
+
+      nav.navbar a.nav-link:hover {
+        color: #cce4ff !important; /* Lighter on hover */
+      }
+
+      nav.navbar .btn-outline-success {
+        border-color: #3399ff;
+        color: #3399ff;
+        transition: all 0.3s ease;
+      }
+
+      nav.navbar .btn-outline-success:hover {
+        background-color: #3399ff;
+        color: white;
+        border-color: #3399ff;
+      }
+
+      .container {
+        background-color: rgba(0, 51, 102, 0.75); /* semi-transparent dark blue */
+        padding: 25px 35px;
+        border-radius: 15px;
+        box-shadow: 0 8px 20px rgba(0, 51, 102, 0.7);
+        max-width: 700px;
+        margin-top: 40px;
+      }
+
+      h2 {
+        color: #99ccff;
+        font-weight: 700;
+        margin-bottom: 20px;
+        text-shadow: 1px 1px 4px #002244;
+      }
+
+      p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        color: #cce4ff;
+        text-shadow: 0 0 5px #001f4d;
       }
     </style>
   </head>
   <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">Home</a>
         <button
@@ -83,25 +121,16 @@
     </nav>
 
     <!-- Main Content -->
-    <div class="container text-center mt-4">
+    <div class="container text-center">
       <h2>Sadika Islam Barna</h2>
       <p>
-        I come from Natore, and I am 22 years old. I study at Jahangirnagar University, Savar, Dhaka.
+        I come from Natore, and I am 22 years old. I studes at Jahangirnagar University, Savar, Dhaka.
         <br />
         I look forward to being in my class because I am always enthusiastic about learning more and curious about what my class has to offer.
         <br />
         I am a dedicated student who enjoys challenges.
       </p>
     </div>
-
-    <!-- Optional Hero Section -->
-    <!--
-    <div class="cont">
-      <div class="hro-img">
-        <img src="your-image.jpg" alt="Hero Image" class="w-100 h-100" />
-      </div>
-    </div>
-    -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
   </body>
