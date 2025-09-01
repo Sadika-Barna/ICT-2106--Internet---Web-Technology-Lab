@@ -17,49 +17,66 @@
       margin: 0;
     }
 
+    /* Button Base Style */
     button {
-      background: linear-gradient(45deg, #6a11cb, #2575fc);
       border: none;
       border-radius: 30px;
       color: white;
       padding: 12px 28px;
       font-size: 1.1rem;
-      margin: 10px 15px;
+      margin: 12px 15px;
       cursor: pointer;
-      box-shadow: 0 8px 15px rgba(38, 50, 56, 0.2);
-      transition: all 0.3s ease;
       font-weight: 600;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
       user-select: none;
     }
 
-    button:hover {
+    /* Colorful Button Variants */
+    .btn-purple {
+      background: linear-gradient(45deg, #6a11cb, #2575fc);
+    }
+
+    .btn-purple:hover {
       background: linear-gradient(45deg, #2575fc, #6a11cb);
-      box-shadow: 0 15px 25px rgba(38, 50, 56, 0.4);
+      box-shadow: 0 12px 25px rgba(38, 50, 56, 0.4);
       transform: translateY(-3px);
     }
 
-    button:active {
-      transform: translateY(0);
-      box-shadow: 0 8px 15px rgba(38, 50, 56, 0.2);
+    .btn-green {
+      background: linear-gradient(45deg, #00c9ff, #92fe9d);
     }
 
+    .btn-green:hover {
+      background: linear-gradient(45deg, #92fe9d, #00c9ff);
+      box-shadow: 0 12px 25px rgba(0, 201, 255, 0.4);
+      transform: translateY(-3px);
+    }
+
+    /* Active effect */
+    button:active {
+      transform: translateY(0);
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Paragraph box */
     #paraID {
-      background: #2196f3;
+      background: linear-gradient(135deg, #2196f3, #21cbf3);
       color: #fff;
-      padding: 15px 25px;
-      border-radius: 15px;
-      font-size: 1.5rem;
-      font-weight: 700;
-      box-shadow: 0 6px 18px rgba(33, 150, 243, 0.6);
+      padding: 18px 30px;
+      border-radius: 20px;
+      font-size: 1.7rem;
+      font-weight: 800;
+      box-shadow: 0 6px 20px rgba(33, 150, 243, 0.6);
       user-select: none;
-      max-width: 400px;
+      max-width: 450px;
       text-align: center;
-      margin-top: 30px;
-      transition: background 0.4s ease, color 0.4s ease;
+      margin-top: 40px;
+      transition: all 0.4s ease;
     }
 
     #paraID:hover {
-      background: #64b5f6;
+      background: linear-gradient(135deg, #64b5f6, #81d4fa);
       color: #0d47a1;
       box-shadow: 0 10px 30px rgba(100, 181, 246, 0.8);
       cursor: pointer;
@@ -68,11 +85,15 @@
 </head>
 <body>
 
-  <button onclick="alert('Hello')">Hello Button</button>
-  <button onclick="paraClick()">Button-1</button>
+  <button class="btn-purple" onclick="alert('Hello')">👋 Hello</button>
+  <button class="btn-green" onclick="paraClick()">✨ Show Name</button>
 
-  <p id="paraID" class="bg-info">Sadika Islam Barna</p>
+  <p id="paraID">Sadika Islam Barna</p>
 
-  <script type="text/javascript" src="index.js"></script>
+  <script>
+    function paraClick() {
+      alert("Hello Sadika Islam Barna! 🌼");
+    }
+  </script>
 </body>
 </html>
