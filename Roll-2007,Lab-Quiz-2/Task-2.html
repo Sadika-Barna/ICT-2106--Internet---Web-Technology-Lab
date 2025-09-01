@@ -78,29 +78,32 @@
       width: 100%;
       height: auto;
       display: block;
-      filter: brightness(0.7);
+      filter: none; /* no dark filter */
       transition: filter 0.3s ease;
     }
     .hero:hover img {
-      filter: brightness(1);
+      filter: none;
     }
     .hero-text {
       position: absolute;
       top: 50px;
       left: 50px;
       max-width: 600px;
+      background-color: rgba(0, 0, 0, 0.45); /* semi-transparent black background behind text */
+      padding: 20px;
+      border-radius: 8px;
     }
     .hero-text h1 {
       font-size: 36px;
       margin-bottom: 10px;
       color: white;
-      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+      text-shadow: none;
     }
     .hero-text p {
       font-size: 18px;
       color: white;
       line-height: 1.4;
-      text-shadow: 1px 1px 5px rgba(0,0,0,0.6);
+      text-shadow: none;
     }
     .services {
       max-width: 1200px;
