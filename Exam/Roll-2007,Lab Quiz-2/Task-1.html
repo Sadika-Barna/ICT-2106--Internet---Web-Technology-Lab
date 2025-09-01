@@ -1,23 +1,68 @@
-function countVowels(sentence) {
-  // Define vowels (both lowercase and uppercase)
-  const vowels = ['a', 'e', 'i', 'o', 'u'];
-  let count = 0;
-
-  // Convert sentence to lowercase to count vowels case-insensitively
-  const lowerSentence = sentence.toLowerCase();
-
-  // Loop through each character in the sentence
-  for (let char of lowerSentence) {
-    if (vowels.includes(char)) {
-      count++;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vowel Counter</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      max-width: 600px;
+      margin: auto;
+      background: #f0f8ff;
+      color: #333;
     }
-  }
-  
-  return count;
-}
+    input, button {
+      padding: 10px;
+      font-size: 1rem;
+      margin-top: 10px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    .result {
+      margin-top: 20px;
+      font-weight: bold;
+      font-size: 1.2rem;
+      color: #0056b3;
+    }
+  </style>
+</head>
+<body>
 
-// Example usage:
-const input = "Hello! How are you?";
-const vowelCount = countVowels(input);
+  <h1>Vowel Counter</h1>
+  <p>Type a sentence below and click "Count Vowels" to see how many vowels it contains.</p>
 
-console.log(`There are ${vowelCount} vowels in the sentence.`);
+  <input type="text" id="sentenceInput" placeholder="Enter your sentence here..." />
+  <button onclick="countVowels()">Count Vowels</button>
+
+  <div class="result" id="result"></div>
+
+  <script>
+    function countVowels() {
+      const vowels = ['a', 'e', 'i', 'o', 'u'];
+      const input = document.getElementById('sentenceInput').value.toLowerCase();
+      let count = 0;
+
+      for (let char of input) {
+        if (vowels.includes(char)) {
+          count++;
+        }
+      }
+
+      document.getElementById('result').textContent = `There are ${count} vowels in the sentence.`;
+    }
+  </script>
+
+</body>
+</html>
