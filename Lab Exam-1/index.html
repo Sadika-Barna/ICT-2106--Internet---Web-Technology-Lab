@@ -1,137 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Sadika Islam Barna</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
-      crossorigin="anonymous"
-    />
-    <style>
-      body {
-        background-image: url('katgolap.jpeg');
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: cover;
-        color: #cce4ff; /* Soft light blue text */
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sadika Islam Barna</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous" />
+  <style>
+    /* Body and Background */
+    body {
+      background-image: url('katgolap.jpeg');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      color: #cce4ff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+    }
+
+    /* Navbar */
+    nav.navbar {
+      background-color: #003366 !important;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+      position: sticky;
+      top: 0;
+      z-index: 1030;
+    }
+
+    nav.navbar a.navbar-brand,
+    nav.navbar a.nav-link {
+      color: #99ccff !important;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    nav.navbar a.nav-link:hover,
+    nav.navbar a.nav-link:focus {
+      color: #cce4ff !important;
+      text-decoration: underline;
+    }
+
+    nav.navbar .btn-outline-success {
+      border-color: #3399ff;
+      color: #3399ff;
+      transition: all 0.3s ease;
+    }
+
+    nav.navbar .btn-outline-success:hover,
+    nav.navbar .btn-outline-success:focus {
+      background-color: #3399ff;
+      color: white;
+      border-color: #3399ff;
+      box-shadow: 0 0 8px #3399ff;
+    }
+
+    /* Container for main content */
+    main.container {
+      background-color: rgba(0, 51, 102, 0.85);
+      padding: 3rem 4rem;
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(0, 51, 102, 0.75);
+      max-width: 720px;
+      margin: 4rem auto 6rem auto;
+      text-align: center;
+      animation: fadeInContent 1.2s ease forwards;
+    }
+
+    /* Headings */
+    h2 {
+      color: #99ccff;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      text-shadow: 1px 1px 6px #002244;
+      font-size: 2.75rem;
+      letter-spacing: 2px;
+    }
+
+    /* Paragraphs */
+    p {
+      font-size: 1.2rem;
+      line-height: 1.75;
+      color: #cce4ff;
+      text-shadow: 0 0 7px #001f4d;
+      margin-bottom: 0;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 1.5rem 1rem;
+      background-color: rgba(0, 51, 102, 0.75);
+      color: #99ccff;
+      font-size: 0.9rem;
+      box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
+      margin-top: auto;
+    }
+
+    /* Search input focus */
+    input.form-control:focus {
+      border-color: #3399ff;
+      box-shadow: 0 0 8px #3399ff;
+      outline: none;
+    }
+
+    /* Animations */
+    @keyframes fadeInContent {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
       }
 
-      nav.navbar {
-        background-color: #003366 !important; /* Dark blue navbar */
+      100% {
+        opacity: 1;
+        transform: translateY(0);
       }
+    }
 
-      nav.navbar a.navbar-brand,
-      nav.navbar a.nav-link {
-        color: #99ccff !important; /* Light blue links */
-        font-weight: 600;
-        transition: color 0.3s ease;
-      }
-
-      nav.navbar a.nav-link:hover {
-        color: #cce4ff !important; /* Lighter on hover */
-      }
-
-      nav.navbar .btn-outline-success {
-        border-color: #3399ff;
-        color: #3399ff;
-        transition: all 0.3s ease;
-      }
-
-      nav.navbar .btn-outline-success:hover {
-        background-color: #3399ff;
-        color: white;
-        border-color: #3399ff;
-      }
-
-      .container {
-        background-color: rgba(0, 51, 102, 0.75); /* semi-transparent dark blue */
-        padding: 25px 35px;
-        border-radius: 15px;
-        box-shadow: 0 8px 20px rgba(0, 51, 102, 0.7);
-        max-width: 700px;
-        margin-top: 40px;
+    /* Responsive */
+    @media (max-width: 576px) {
+      main.container {
+        padding: 2rem 1.5rem;
+        margin: 3rem 1rem 4rem 1rem;
       }
 
       h2 {
-        color: #99ccff;
-        font-weight: 700;
-        margin-bottom: 20px;
-        text-shadow: 1px 1px 4px #002244;
+        font-size: 2rem;
       }
 
       p {
-        font-size: 1.1rem;
-        line-height: 1.6;
-        color: #cce4ff;
-        text-shadow: 0 0 5px #001f4d;
+        font-size: 1rem;
       }
-    </style>
-  </head>
-  <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Home</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Course</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Pages</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Blog</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Event</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" aria-disabled="true">Component</a>
-            </li>
-          </ul>
-          <form class="d-flex" role="search">
-            <input
-              class="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button class="btn btn-outline-success" type="submit">
-              Search
-            </button>
-          </form>
-        </div>
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark" aria-label="Primary navigation">
+    <div class="container-fluid px-4">
+      <a class="navbar-brand" href="#">Home</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Course</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pages</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Event</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" aria-disabled="true" tabindex="-1">Component</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search" aria-label="Site search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
       </div>
-    </nav>
-
-    <!-- Main Content -->
-    <div class="container text-center">
-      <h2>Sadika Islam Barna</h2>
-      <p>
-        I come from Natore, and I am 22 years old. I studes at Jahangirnagar University, Savar, Dhaka.
-        <br />
-        I look forward to being in my class because I am always enthusiastic about learning more and curious about what my class has to offer.
-        <br />
-        I am a dedicated student who enjoys challenges.
-      </p>
     </div>
+  </nav>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
-  </body>
+  <!-- Main Content -->
+  <main class="container" role="main">
+    <h2>Sadika Islam Barna</h2>
+    <p>
+      I come from Natore, and I am 22 years old. I study at Jahangirnagar University, Savar, Dhaka.<br />
+      I look forward to being in my class because I am always enthusiastic about learning more and curious about what
+      my class has to offer.<br />
+      I am a dedicated student who enjoys challenges.
+    </p>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Sadika Islam Barna &nbsp;&bull;&nbsp; All Rights Reserved.
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-QF3f+Ofptz3kv5fWvbiE2MW8oxokAcOfzv14Bfb8m0Ia7N36vhUD3AyKSVy+j4pF" crossorigin="anonymous"></script>
+</body>
+
 </html>
