@@ -1,12 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initialscale=1.0">
-<title>JavaScript Practice</title>
-<link rel="stylesheet" href="CSS/style.css"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JavaScript Practice</title>
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <style>
+    /* Optional basic style if external CSS is missing */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f9ff;
+      padding: 40px;
+      text-align: center;
+      color: #333;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 30px;
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    h1 {
+      color: #007bff;
+      margin-bottom: 20px;
+    }
+  </style>
 </head>
+
 <body>
-<script src="js/index.js"></script>
+
+  <div class="container">
+    <h1>JavaScript Practice</h1>
+    <p id="output">Open the console or interact with the page to see JavaScript in action!</p>
+    <!-- You can add buttons, input fields, etc. here for practice -->
+  </div>
+
+  <!-- External JavaScript -->
+  <script src="js/index.js"></script>
 </body>
+
 </html>
