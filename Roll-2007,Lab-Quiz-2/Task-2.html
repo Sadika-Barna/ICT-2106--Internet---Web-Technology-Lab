@@ -1,49 +1,93 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Image Toggle Example</title>
-    <style>
-        img {
-            width: 700px;
-            height: auto;
-            cursor: pointer;
-            display: block;
-            margin: 70px auto;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Colorful Image Toggle Example</title>
+  <style>
+    body {
+      margin: 0;
+      background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #333;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+      text-align: center;
+      user-select: none;
+    }
+    h2 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: #4a148c;
+      margin-bottom: 25px;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    }
+    #image-container img {
+      width: 700px;
+      max-width: 90vw;
+      height: auto;
+      cursor: pointer;
+      border-radius: 20px;
+      box-shadow: 0 12px 30px rgba(74, 20, 140, 0.5);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    #image-container img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 18px 45px rgba(74, 20, 140, 0.7);
+    }
+    #caption {
+      margin-top: 15px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #6a1b9a;
+      text-shadow: 0 1px 2px rgba(255, 255, 255, 0.6);
+    }
+    @media (max-width: 720px) {
+      #image-container img {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <h2 style="text-align: center;">Click the Image to Toggle</h2>
+  <h2>Click the Image to Toggle</h2>
 
-    <div id="image-container">
-        
-    </div>
+  <div id="image-container">
+    <!-- Image will be injected here -->
+  </div>
+  <div id="caption"></div>
 
-     <script type="text/javascript" src="Task-2.js"></script>
-<script>const images = [
-            "image/picture/image2.jpg",
-            "image/picture/image3.jpg",
-            "image/picture/image4.jpg",
-            "image/picture/katgolap.jpeg",
-            "image/picture/Sadika.jpg"
-        ];
+  <script>
+    const images = [
+      { src: "image/picture/image2.jpg", caption: "Beautiful Landscape 1" },
+      { src: "image/picture/image3.jpg", caption: "Serene Nature View" },
+      { src: "image/picture/image4.jpg", caption: "Sunset Glow" },
+      { src: "image/picture/katgolap.jpeg", caption: "Katgolap Flower" },
+      { src: "image/picture/Sadika.jpg", caption: "Portrait: Sadika" }
+    ];
 
-        let currentImageIndex = 0;
+    let currentImageIndex = 0;
 
-        
-        const newImage = document.createElement("img");
-        newImage.src = images[currentImageIndex];
+    const container = document.getElementById("image-container");
+    const captionDiv = document.getElementById("caption");
 
-        
-        newImage.addEventListener("click", () => {
-            currentImageIndex = (currentImageIndex + 1) % images.length;
-            newImage.src = images[currentImageIndex];
-        });
+    const newImage = document.createElement("img");
+    newImage.src = images[currentImageIndex].src;
+    captionDiv.textContent = images[currentImageIndex].caption;
 
-        
-        const container = document.getElementById("image-container");
-        container.innerHTML = "";  
-        container.appendChild(newImage);  </script>
+    newImage.addEventListener("click", () => {
+      currentImageIndex = (currentImageIndex + 1) % images.length;
+      newImage.src = images[currentImageIndex].src;
+      captionDiv.textContent = images[currentImageIndex].caption;
+    });
+
+    container.appendChild(newImage);
+  </script>
+
 </body>
 </html>
