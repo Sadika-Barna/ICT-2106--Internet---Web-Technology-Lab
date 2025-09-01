@@ -5,78 +5,131 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Colorful Style Toggle</title>
   <style>
+    /* Body background with smooth gradient */
     body {
-      background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      padding: 40px;
+      padding: 50px 20px;
       display: flex;
       flex-direction: column;
       align-items: center;
       min-height: 100vh;
       margin: 0;
-    }  #ParaId {
-      max-width: 600px;
+      color: #fff;
+    }
+
+    /* Paragraph default style */
+    #ParaId {
+      max-width: 650px;
       font-size: 18px;
-      padding: 20px 30px;
-      border-radius: 15px;
-      background: white;
+      padding: 25px 35px;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.9);
       color: #333;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      margin-bottom: 30px;
-      transition: all 0.5s ease;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      margin-bottom: 40px;
+      transition: all 0.6s ease;
       text-align: justify;
-    }  #ParaId.styled {
-      background: linear-gradient(135deg, #667eea, #764ba2);
+      line-height: 1.6;
+      font-weight: 500;
+      letter-spacing: 0.3px;
+    }
+
+    /* Styled version with gradient background and glowing text */
+    #ParaId.styled {
+      background: linear-gradient(135deg, #ff758c 0%, #ff7eb3 100%);
       color: #fff;
       font-weight: 700;
       font-size: 20px;
-      text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
-      box-shadow: 0 8px 20px rgba(118,75,162,0.7);
-      letter-spacing: 1.2px;
-     } #ParaId.fontChanged {
+      text-shadow: 0 0 10px rgba(255, 126, 179, 0.8);
+      box-shadow: 0 12px 30px rgba(255, 126, 179, 0.6);
+      letter-spacing: 1.4px;
+      font-style: italic;
+      user-select: text;
+    }
+
+    /* Font family toggle style */
+    #ParaId.fontChanged {
       font-family: 'Courier New', Courier, monospace;
-    }    button {
+      font-size: 19px;
+      color: #3a3a3a;
+      background: #e0e0e0;
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+      font-style: normal;
+      letter-spacing: 0.8px;
+      text-shadow: none;
+      user-select: text;
+    }
+
+    /* Button container */
+    div {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 100%;
+      max-width: 700px;
+    }
+
+    /* Buttons style */
+    button {
       background: #fff;
-      border: 2px solid #764ba2;
+      border: 3px solid transparent;
       color: #764ba2;
-      font-weight: bold;
-      padding: 12px 25px;
-      margin: 0 10px;
-      border-radius: 50px;
+      font-weight: 700;
+      padding: 14px 30px;
+      border-radius: 40px;
       cursor: pointer;
       font-size: 16px;
-      box-shadow: 0 4px 12px rgba(118,75,162,0.3);
+      box-shadow: 0 6px 15px rgba(118, 75, 162, 0.4);
       transition: all 0.3s ease;
       outline: none;
       user-select: none;
-    }    button:hover {
-      background: #764ba2;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Button hover effect with gradient border */
+    button:hover {
       color: #fff;
-      box-shadow: 0 6px 16px rgba(118,75,162,0.7);
+      box-shadow: 0 10px 20px rgba(255, 126, 179, 0.8);
+      border-color: transparent;
+      background: linear-gradient(135deg, #ff758c 0%, #ff7eb3 100%);
       transform: translateY(-3px);
-    }   button:active {
+    }
+
+    /* Button active click effect */
+    button:active {
       transform: translateY(-1px);
-      box-shadow: 0 4px 8px rgba(118,75,162,0.5);
-    }</style>
+      box-shadow: 0 6px 12px rgba(255, 126, 179, 0.7);
+    }
+  </style>
 </head>
-<body> <p id="ParaId">
+<body>
+  <p id="ParaId">
     Lorem ipsum dolor sit amet consectetur adipisicing elit. 
     Nesciunt itaque vero distinctio odit. Eos ipsam expedita veniam numquam, 
     placeat deserunt minima culpa pariatur quisquam praesentium inventore necessitatibus,
     officia id est.
-  </p>  <div>
+  </p>
+  <div>
     <button onclick="addStyle()">Add Style</button>
     <button onclick="removeStyle()">Remove Style</button>
-    <button onclick="toggleFont()">Front Change</button> <!-- NEW BUTTON -->
+    <button onclick="toggleFont()">Font Change</button>
   </div>
+
   <script>
     const para = document.getElementById('ParaId');
-function addStyle() {
+    function addStyle() {
       para.classList.add('styled');
-    }  function removeStyle() {
+    }
+    function removeStyle() {
       para.classList.remove('styled');
-    }function toggleFont() {
+      para.classList.remove('fontChanged'); // Remove fontChanged if styled is removed
+    }
+    function toggleFont() {
       para.classList.toggle('fontChanged');
-    }  </script>
+    }
+  </script>
 </body>
 </html>
