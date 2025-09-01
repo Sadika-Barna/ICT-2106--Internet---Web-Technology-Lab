@@ -1,131 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>CSS Box Model and Text Demo</title>
-<!-- Bootstrap CSS CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-<style>
-        body {
-            background-color: #f0f4f8;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: #343a40;
-            padding: 40px 20px;
-        }
-        h1,
-        h2 {
-            color: #0d6efd; /* Bootstrap primary color */
-            font-weight: 700;
-        }
-        h1 {
-            border: 3px solid #ff6347; /* Tomato */
-            padding: 15px 25px;
-            border-radius: 8px;
-            display: inline-block;
-            margin-bottom: 25px;
-        }
-       p {
-            font-size: 1.2rem;
-            line-height: 1.6;
-        }
-       p.red-text {
-            color: #dc3545; /* Bootstrap danger */
-            font-family: 'Courier New', Courier, monospace;
-            font-weight: 600;
-        }
-      .box-model {
-            background-color: #fff;
-            border: 15px solid #198754; /* Bootstrap success */
-            padding: 50px;
-            margin: 30px 0;
-            border-radius: 15px;
-            box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
-            max-width: 700px;
-        }
-       a.custom-link {
-            color: #0d6efd;
-            font-weight: 600;
-            text-decoration: none;
-        }
-       a.custom-link:hover {
-            text-decoration: underline;
-        }
-     img {
-            max-width: 220px;
-            height: auto;
-            border-radius: 8px;
-            margin: 20px 0;
-            box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
-        }
-        blockquote {
-            border-left: 5px solid #6c757d;
-            font-style: italic;
-            color: #6c757d;
-            padding-left: 20px;
-            margin: 30px 0;
-            background-color: #e9ecef;
-            border-radius: 6px;
-        }
-       pre {
-            background-color: #212529;
-            color: #f8f9fa;
-            padding: 15px;
-            border-radius: 8px;
-            max-width: 400px;
-            overflow-x: auto;
-            font-family: 'Courier New', Courier, monospace;
-        }
-      bdo {
-            display: block;
-            font-size: 1.1rem;
-            margin: 20px 0;
-        }
-      sub,
-        sup {
-            font-size: 0.75rem;
-        }
-cite {
-            font-style: italic;
-            color: #6c757d;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sadika Islam Barna - CSS Box Model & Typography</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <style>
+    body {
+      background-color: #f8f9fa;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #343a40;
+      padding: 40px 20px;
+    }
+
+    h1, h2 {
+      color: #0d6efd;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    h1 {
+      background-color: #ffffff;
+      border: 3px solid #ff6347;
+      padding: 15px 25px;
+      border-radius: 10px;
+      display: inline-block;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    h2 {
+      margin-top: 60px;
+      margin-bottom: 25px;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    .red-text {
+      color: #dc3545;
+      font-family: 'Courier New', Courier, monospace;
+      font-weight: 600;
+    }
+
+    .box-model {
+      background-color: #ffffff;
+      border: 15px solid #198754;
+      padding: 50px;
+      margin: 30px auto;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      max-width: 700px;
+    }
+
+    a.custom-link {
+      color: #0d6efd;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    a.custom-link:hover {
+      text-decoration: underline;
+    }
+
+    img {
+      max-width: 220px;
+      height: auto;
+      border-radius: 10px;
+      margin: 20px auto;
+      display: block;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    cite {
+      font-style: italic;
+      color: #6c757d;
+      display: block;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    blockquote {
+      border-left: 5px solid #6c757d;
+      background-color: #e9ecef;
+      color: #6c757d;
+      font-style: italic;
+      padding: 20px;
+      margin: 30px auto;
+      border-radius: 6px;
+      max-width: 600px;
+    }
+
+    pre {
+      background-color: #212529;
+      color: #f8f9fa;
+      padding: 15px;
+      border-radius: 8px;
+      font-family: 'Courier New', Courier, monospace;
+      margin: 20px auto;
+      max-width: 400px;
+      overflow-x: auto;
+    }
+
+    bdo {
+      display: block;
+      font-size: 1.1rem;
+      margin: 20px auto;
+      text-align: center;
+    }
+
+    .section-spacing {
+      margin-top: 60px;
+    }
+
+  </style>
 </head>
+
 <body class="container">
 
-    <h2>Demonstrating the Box Model</h2>
-
-    <p class="red-text">
+  <main>
+    <!-- Box Model Section -->
+    <section>
+      <h2>🎁 Demonstrating the Box Model</h2>
+      <p class="red-text text-center">
         The CSS box model is essentially a box that wraps around every HTML element. It consists of: borders,
         padding, margins, and the actual content.
-    </p>
- <div class="box-model">
+      </p>
+
+      <div class="box-model text-center">
         This text is the content of the box. We have added a 50px padding, 20px margin and a 15px green border.
+        <br><br>
         Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
         Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
         Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </div>
-   <h1>Sadika Islam Barna</h1>
-   <p>I<ins>am</ins> <mark>a</mark> <del>student</del></p>
-<a href="https://www.w3schools.com" target="_blank" rel="noopener noreferrer" class="custom-link">
-        This is a link
-    </a>
-<p class="text-info fs-5">
+      </div>
+    </section>
+
+    <!-- Personal Info Section -->
+    <section class="section-spacing">
+      <h1>Sadika Islam Barna</h1>
+
+      <p class="text-center">
+        I <ins>am</ins> <mark>a</mark> <del>student</del>
+      </p>
+
+      <div class="text-center mb-3">
+        <a href="https://www.w3schools.com" target="_blank" rel="noopener noreferrer" class="custom-link">
+          ➤ This is a link
+        </a>
+      </div>
+
+      <p class="text-info fs-5 text-center">
         I am a student<br />
         in Jahangirnagar University.
-    </p>
-    <img src="/Lab Class-5/images/Sadika.jpg" alt="Sadika Islam Barna Image" />
-<p><cite>The Scream</cite> by Edvard Munch. Painted in 1893.</p>
- <bdo dir="rtl">Sadika Islam Barna</bdo>
- <pre>
+      </p>
+
+      <img src="/Lab Class-5/images/Sadika.jpg" alt="Sadika Islam Barna Image" />
+
+      <cite>"The Scream" by Edvard Munch. Painted in 1893.</cite>
+
+      <bdo dir="rtl">Sadika Islam Barna</bdo>
+
+      <pre>
 I am Sadika.
 I am a student.
-</pre>
-    <p>My Father<sub>is</sub> <sup>a</sup> Businessman</p>
-   <blockquote>It is a car</blockquote>
-    <h1>My First CSS Example</h1>
-    <p>This is a paragraph.</p>
-  <!-- Bootstrap JS Bundle -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+      </pre>
+
+      <p class="text-center">My Father <sub>is</sub> <sup>a</sup> Businessman</p>
+
+      <blockquote>It is a car</blockquote>
+    </section>
+
+    <!-- Final CSS Example Section -->
+    <section class="section-spacing text-center">
+      <h1>🎨 My First CSS Example</h1>
+      <p>This is a paragraph.</p>
+    </section>
+  </main>
+
+  <!-- Bootstrap Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
