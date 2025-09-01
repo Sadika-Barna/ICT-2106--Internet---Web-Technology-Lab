@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript DOM Loop Example</title>
+</head>
+<body>
+
+    <h2>My Favorite Fruits</h2>
+    <ul id="fruitList"></ul>
+
+    <script>
+        // JavaScript array
+        const fruits = ["Apple", "Banana", "Mango", "Orange", "Pineapple"];
+
+        // Get the ul element by ID
+        const list = document.getElementById("fruitList");
+
+        // Loop through the array and create li elements
+        for (let i = 0; i < fruits.length; i++) {
+            const li = document.createElement("li");  // Create <li> element
+            li.textContent = fruits[i];               // Set the text
+            list.appendChild(li);                     // Add it to the list
+        }
+    </script>
+
+</body>
+</html>
