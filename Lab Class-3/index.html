@@ -6,78 +6,150 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Computer and Classes Info</title>
   <style>
+    /* Body & Container */
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 20px;
-      background-color: #f0f8ff; /* light blue */
+      background: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%);
       color: #333;
-    }
-
-    h2 {
-      color: #007BFF;
-      border-bottom: 2px solid #007BFF;
-      padding-bottom: 5px;
-      margin-top: 40px;
+      min-height: 100vh;
     }
 
     .container {
-      max-width: 800px;
+      max-width: 900px;
       margin: 0 auto;
-      background-color: #ffffff;
-      padding: 30px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      border-radius: 10px;
+      background: #ffffffdd;
+      padding: 35px 40px;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+      backdrop-filter: blur(8px);
+      transition: box-shadow 0.3s ease;
     }
 
+    .container:hover {
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+    }
+
+    /* Headings */
+    h2 {
+      color: #2a52be;
+      font-weight: 700;
+      font-size: 2rem;
+      margin-top: 50px;
+      margin-bottom: 20px;
+      position: relative;
+      padding-bottom: 8px;
+    }
+
+    h2::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 60px;
+      height: 4px;
+      background: linear-gradient(90deg, #f76b1c, #ffb347);
+      border-radius: 4px;
+    }
+
+    /* Table Styling */
     table {
       border-collapse: collapse;
       width: 100%;
-      margin-bottom: 30px;
+      margin-bottom: 40px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      overflow: hidden;
     }
 
     th,
     td {
-      border: 1px solid #ccc;
-      padding: 10px 15px;
+      padding: 14px 20px;
       text-align: left;
+      border-bottom: 1px solid #ddd;
+      transition: background-color 0.3s ease;
     }
 
     th {
-      background-color: #007BFF;
+      background: linear-gradient(90deg, #36d1dc, #5b86e5);
       color: white;
+      font-weight: 600;
     }
 
+    tbody tr:hover td {
+      background-color: #f0f8ff;
+      color: #2a52be;
+      font-weight: 600;
+    }
+
+    /* List Styling */
     ul {
-      list-style-type: disc;
-      padding-left: 20px;
-      margin-bottom: 30px;
+      list-style-type: square;
+      padding-left: 25px;
+      margin-bottom: 40px;
+      color: #444;
+      font-size: 1.1rem;
     }
 
     li {
-      padding: 5px 0;
+      margin-bottom: 10px;
+      transition: color 0.3s ease;
     }
 
+    li:hover {
+      color: #f76b1c;
+      font-weight: 600;
+    }
+
+    /* Definition List Styling */
     dl {
-      margin-bottom: 20px;
+      margin-bottom: 40px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     dt {
-      font-weight: bold;
-      margin-top: 15px;
-      color: #007BFF;
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: #5b86e5;
+      margin-top: 20px;
+      text-shadow: 1px 1px 3px rgba(91, 134, 229, 0.5);
     }
 
     dd {
-      margin-left: 20px;
+      margin-left: 25px;
       color: #555;
+      font-size: 1rem;
+      line-height: 1.5;
     }
 
+    /* Footer */
     .footer {
       text-align: center;
       font-size: 14px;
-      color: #888;
-      margin-top: 40px;
+      color: #eee;
+      margin-top: 50px;
+      padding: 15px 0;
+      background: #2a52be;
+      border-radius: 0 0 15px 15px;
+      box-shadow: 0 -3px 10px rgba(42, 82, 190, 0.5);
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .container {
+        padding: 20px;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      th, td {
+        padding: 10px 12px;
+      }
     }
   </style>
 </head>
