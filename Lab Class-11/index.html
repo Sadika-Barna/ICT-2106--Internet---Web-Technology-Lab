@@ -1,52 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Colorful Fruit List</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Colorful Centered Content</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f8ff;
-            padding: 30px;
-        }
-
-        h2 {
-            color: #2c3e50;
-        }
-
-        ul {
-            list-style-type: none;
+            background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
             padding: 0;
+            text-align: center;
+            color: #333;
         }
 
-        li {
-            font-size: 18px;
-            margin: 8px 0;
-            padding: 10px;
-            border-radius: 8px;
-            color: white;
-            width: fit-content;
+        h1 {
+            color: #ff4081;
+            font-size: 3em;
+            margin-top: 1.5em;
+            text-shadow: 2px 2px 5px #ff85a2;
+        }
+
+        p {
+            color: #3f51b5;
+            font-size: 1.5em;
+            margin: 1em 0 2em 0;
+            font-weight: 600;
+            text-shadow: 1px 1px 3px #9fa8da;
+        }
+
+        img {
+            max-width: 80%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.5);
         }
     </style>
 </head>
 <body>
 
-    <h2>🍎 My Favorite Fruits</h2>
-    <ul id="fruitList"></ul>
-
-    <script>
-        const fruits = ["Apple", "Banana", "Mango", "Orange", "Pineapple"];
-        const colors = ["#e74c3c", "#f1c40f", "#2ecc71", "#e67e22", "#9b59b6"]; // Matching colors
-
-        const list = document.getElementById("fruitList");
-
-        for (let i = 0; i < fruits.length; i++) {
-            const li = document.createElement("li");
-            li.textContent = fruits[i];
-            li.style.backgroundColor = colors[i]; // Set background color
-            list.appendChild(li);
-        }
-    </script>
+    <h1>Centered Heading</h1>
+    <p>Centered paragraph.</p>
+    <img src="image1.webp" alt="Descriptive Image" />
 
 </body>
 </html>
