@@ -2,27 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Student List</title>
+    <title>📋 Student List Manager</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f9ff;
-            padding: 30px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #74ebd5, #ACB6E5);
+            margin: 0;
+            padding: 0;
             color: #333;
         }
 
         .container {
-            background: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            width: 500px;
-            margin: auto;
-            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            background-color: #ffffffcc;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
         }
 
         h2 {
             text-align: center;
-            color: #005f99;
+            color: #2c3e50;
+            margin-bottom: 20px;
         }
 
         ul {
@@ -31,67 +33,81 @@
         }
 
         li {
-            background: #e0f7fa;
-            padding: 10px;
-            margin: 5px 0;
-            border-left: 5px solid #00796b;
-            border-radius: 5px;
+            background: #e3f2fd;
+            margin: 10px 0;
+            padding: 15px;
+            border-left: 6px solid #42a5f5;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: 0.3s ease;
+        }
+
+        li:hover {
+            background: #bbdefb;
         }
 
         button {
-            background-color: #00796b;
+            background-color: #42a5f5;
             color: white;
             border: none;
-            padding: 10px 15px;
-            margin-top: 15px;
-            border-radius: 5px;
+            padding: 12px 20px;
+            margin-top: 20px;
+            border-radius: 8px;
+            font-size: 16px;
             cursor: pointer;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            transition: 0.3s ease;
         }
 
         button:hover {
-            background-color: #004d40;
+            background-color: #1e88e5;
+        }
+
+        .icon {
+            margin-right: 8px;
+            color: #1565c0;
         }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <h2>Student List</h2>
+    <h2>📚 Student List Manager</h2>
     <ul id="studentList"></ul>
-    <button onclick="updateStudents()">Update Students</button>
+    <button onclick="updateStudents()">➕ Update Student List</button>
 </div>
 
 <script>
-    // Step 1: Initial 3 students
+    // Initial students
     let students = [
         { id: 1, name: "Amit", section: "A", year: 2022 },
         { id: 2, name: "Sara", section: "B", year: 2023 },
         { id: 3, name: "Ravi", section: "C", year: 2024 }
     ];
 
-    // Function to display all students
+    // Show student list
     function showStudents() {
         const list = document.getElementById('studentList');
-        list.innerHTML = ""; // Clear previous list
+        list.innerHTML = "";
         students.forEach(student => {
-            list.innerHTML += `<li>
-                <strong>ID:</strong> ${student.id} |
-                <strong>Name:</strong> ${student.name} |
-                <strong>Section:</strong> ${student.section} |
-                <strong>Year:</strong> ${student.year}
-            </li>`;
+            list.innerHTML += `
+                <li>
+                    <span class="icon">👨‍🎓</span>
+                    <strong>ID:</strong> ${student.id} |
+                    <strong>Name:</strong> ${student.name} |
+                    <strong>Section:</strong> ${student.section} |
+                    <strong>Year:</strong> ${student.year}
+                </li>
+            `;
         });
     }
 
-    // Function to remove first student and add a new one
+    // Update list: remove first, add new
     function updateStudents() {
-        // Remove first student
-        students.shift();
-
-        // Add new student
-        students.push({ id: 4, name: "Nisha", section: "D", year: 2025 });
-
-        // Show updated list
+        students.shift(); // Remove first
+        students.push({ id: 4, name: "Nisha", section: "D", year: 2025 }); // Add new
         showStudents();
     }
 
